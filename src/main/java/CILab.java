@@ -16,13 +16,13 @@ public class CILab implements CILabInterface {
     	boolean result = false;
     	boolean isPreviousUpper = false;
         for (int i = 0; i < myString.length(); i++) {
-        	if(i == 0 && myString[i].isUpperCase()) {
+        	if(i == 0 && Character.isUpperCase(myString.charAt(i))) {
         		isPreviousUpper = true;
         	}
-        	else if (i = 1 && !myString[i].isUpperCase()) {
+        	else if (i == 1 && !Character.isUpperCase(myString.charAt(i))) {
         		isPreviousUpper = false;
         	}
-        	else if(myString[i].isUpperCase()) {
+        	else if(Character.isUpperCase(myString.charAt(i))) {
         		if(isPreviousUpper) {
         			result = true;
         		}
